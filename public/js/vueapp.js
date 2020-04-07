@@ -5,7 +5,7 @@ var app = new Vue({
     data: {
         strings: {
             name: "WANDRIO: Event Horizon",
-            copyright: "2020 Andy Zimmelman",
+            copyright: "2020 AZIM",
             navs: ["Home", "About", "Contact"],
             contacts: [
                 new Contact("twitter", "@wandrioapp", "https://twitter.com/wandrioapp"),
