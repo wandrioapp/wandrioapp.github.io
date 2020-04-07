@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>wandrio: event horizon</title>
+  <link rel="shortcut icon" href="public/images/wandrio_v01.png" />
+  <link rel="stylesheet" href="public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/main.css">
+</head>
+
+  <body >
+    <div id="app">
+      <nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+          <a class="py-2 d-flex flex-row" href="#" aria-label="Product">
+            <img :src="strings.home.appImageURL" width="24" height="24" fill="none"/>
+            <p>{{strings.home.header}}</p>
+          </a>
+          <a v-for="nav in strings.navs" class="py-2 d-none d-md-inline-block" :href="'#'+nav">{{nav}}</a>
+        </div>
+      </nav>
+      
+      <div id="Home" class="position-relative overflow-hidden text-light text-center">
+        <div class="col-md-5 p-lg-5 mx-auto">
+          <h1 class="display-6 font-weight-normal">{{strings.home.header}}</h1>
+          <img class="img-fluid rounded mx-auto d-block" :src="strings.home.appImageURL"/>
+          
+          <p class="lead font-weight-normal" v-for="subtitle in strings.home.subtitles">{{subtitle}}</p>
+          <a class="btn" :href="strings.home.download.appDomain"><img :src="strings.home.download.imageURL"/></a>
+        </div>
+        <div class="product-device shadow-sm d-none d-md-block"></div>
+        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+      </div>
+      <div id="About" class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div :class="'bg-'+about.color" class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-light text-center overflow-hidden"  v-for="about in strings.about.children">
+          <div class="my-3 p-3">
+            <div class="my-3 p-3">
+              <h2 class="display-5">{{about.title}}</h2>
+              <p class="lead">{{about.subtitle}}</p>
+            </div>
+            <img class="w-50 h-75" :src="about.imageURL"/>
+          </div>
+        </div>
+      </div>
+      
+      <footer id="Contact" class="container text-center">
+        <div class="rowtext-center">
+          <div class="col-12 col-md">
+            <a class="d-block mb-3 text-light" v-for="contact in strings.contacts" :href="contact.link">{{contact.name}}: {{contact.value}}</a>
+            <small class="d-block mb-3 text-light">
+              <img :src="strings.home.appImageURL" width="24" height="24" fill="none"/>
+              {{strings.name}} &copy; {{strings.copyright}}
+            </small>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+          
+  </body>
+
+  <script src="public/js/vue.js"></script>
+  <script src="public/js/vueapp.js"></script>
+</html>
