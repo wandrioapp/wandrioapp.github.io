@@ -9,7 +9,7 @@ var app = new Vue({
             navs: ["Home", "About", "Contact"],
             contacts: [
                 new Contact("twitter", "@wandrioapp", "https://twitter.com/wandrioapp"),
-                new Contact("email", "dudesuperuser@gmail", "#Contact"),
+                new Contact("email", "dudesuperuser@gmail", "mailto:dudesuperuser@gmail.com"),
             ],
             home:{
                 header: "WANDRIO: Event Horizon",
@@ -20,7 +20,7 @@ var app = new Vue({
                 appImageURL: "public/images/wandrio_v01.png",
                 download: {
                     imageURL: "public/images/appstore_download_b.svg",
-                    appDomain: "#About",
+                    appDomain: "https://apps.apple.com/us/app/wandrio-event-horizon/id1488794205",
                 },
             },
             about: {
