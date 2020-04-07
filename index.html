@@ -13,7 +13,7 @@
     <div id="app">
       <nav class="site-header sticky-top py-1">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
-          <a class="py-2 d-flex flex-row" href="#" aria-label="Product">
+          <a class="py-2 d-flex flex-row" target="_blank" :href="strings.home.download.appDomain">
             <img :src="strings.home.appImageURL" width="24" height="24" fill="none"/>
             <p>{{strings.home.header}}</p>
           </a>
@@ -70,7 +70,7 @@
     </div>
           
   </body>
-<!--   <script src="public/js/vidjs.js"></script> -->
+  <!-- <script src="public/js/vidjs.js"></script> -->
   <script src="public/js/vue.js"></script>
   <script src="public/js/vueapp.js"></script>
 </html>
