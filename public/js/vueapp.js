@@ -27,7 +27,7 @@ var app = new Vue({
                 children: [
                     new About("Combat", "Online PVP & PVE", "public/images/iphonepromax_img_0.png", "primary"),
                     new About("Craft", "Craft Equipment and Items", "public/images/iphonepromax_img_1.png", "dark"),
-                    new About("Gameplay", "Tap To Play!", "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo114/v4/1d/c2/26/1dc22638-ce4f-54ac-e1b9-4d33d02e334d/P64710217_default.m3u8", "info", true),
+                    // new About("Gameplay", "Tap To Play!", "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo114/v4/1d/c2/26/1dc22638-ce4f-54ac-e1b9-4d33d02e334d/P64710217_default.m3u8", "info", true), // was not visible on mobile !
                 ],
                 iphone8: "public/images/iphone8max.png",
             },
