@@ -40,21 +40,13 @@
               <p class="lead">{{about.subtitle}}</p>
               
             </div>
-            <div class="video-container">
-              <!-- <img v-if="about.hasVideo" class="w-50 h-75" :src="strings.about.iphone8" /> -->
-              <video :id="'video-'+about.title" v-if="about.hasVideo" controls>
-                <!-- <source :src="about.link" v-if="about.hasVideo" type="application/x-mpegURL" > -->
-              </video>
-            </div>
-            
+            <iframe v-if="about.hasVideo" width="100%" height="300px" :src="about.link" frameborder="0" allowfullscreen></iframe>
             
             <img v-if="!about.hasVideo" class="w-50 h-75" :src="about.link"/>
           </div>
         </div>
       </div>
-  
-      
-      
+ 
       <footer id="Contact" class="container text-center">
         <div class="rowtext-center">
           <div class="col-12 col-md">
@@ -70,7 +62,6 @@
     </div>
           
   </body>
-  <!-- <script src="public/js/vidjs.js"></script> -->
   <script src="public/js/vue.js"></script>
   <script src="public/js/vueapp.js"></script>
 </html>

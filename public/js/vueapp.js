@@ -25,9 +25,11 @@ var app = new Vue({
             },
             about: {
                 children: [
-                    new About("Combat", "Online PVP & PVE", "public/images/iphonepromax_img_0.png", "primary"),
-                    new About("Craft", "Craft Equipment and Items", "public/images/iphonepromax_img_1.png", "dark"),
-                    // new About("Gameplay", "Tap To Play!", "https://apptrailers.itunes.apple.com/itunes-assets/PurpleVideo114/v4/1d/c2/26/1dc22638-ce4f-54ac-e1b9-4d33d02e334d/P64710217_default.m3u8", "info", true), // was not visible on mobile !
+                    new About("Combat", "Online PVP & PVE!", "public/images/iphonepromax_img_0.png", "primary"),
+                    new About("Create", "Buy or Create Equipment and Items!", "public/images/iphonepromax_img_1.png", "dark"),
+                    new About("Gameplay", "Join and Battle Others!", "https://www.youtube.com/embed/WthMVHq9Hrw", "info", true),
+                    new About("Host", "Create a Lobby to Play With Friends!", "https://www.youtube.com/embed/zwLJz166rDM", "success", true),
+                    new About("Crafting", "Craft Better Equipment for Battle!", "https://www.youtube.com/embed/evGbIluyes8", "secondary", true),
                 ],
                 iphone8: "public/images/iphone8max.png",
             },
@@ -37,18 +39,7 @@ var app = new Vue({
 
     },
     mounted() {
-        // LOAD STREAM VIDS
-        let abouts = this.strings.about.children
-        for (var i = 0; i < abouts.length; i++) {
-            if (abouts[i].hasVideo) {
-                var player = videojs("video-"+abouts[i].title)
-                player.src({
-                    type: "application/x-mpegURL",
-                    src: abouts[i].link,
-                })
-            }
-        }
-        
+
     },
 })
 
